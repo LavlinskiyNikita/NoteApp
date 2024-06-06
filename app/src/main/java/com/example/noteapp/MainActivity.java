@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == Activity.RESULT_OK) {
                 Notes new_notes = (Notes) data.getSerializableExtra("note");
                 database.MainDAO().insert(new_notes);
-                notes.addAll(database.MainDAO().getAll());
                 notes.clear();
+                notes.addAll(database.MainDAO().getAll());
                 noteListAdapter.notifyDataSetChanged();
             }
         }

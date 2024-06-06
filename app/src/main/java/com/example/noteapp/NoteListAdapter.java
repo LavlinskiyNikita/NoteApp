@@ -104,7 +104,7 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
 
         Random random = new Random();
         int random_color = random.nextInt(colorCode.size());
-        return random_color;
+        return colorCode.get(random_color);
     }
 
     @Override
@@ -124,5 +124,6 @@ class NoteViewHolder extends RecyclerView.ViewHolder {
         titleTxt = itemView.findViewById(R.id.txtTitle);
         notesTxt = itemView.findViewById(R.id.notesTxt);
         dateTxt = itemView.findViewById(R.id.dateTxt);
+        imageView = itemView.findViewById(R.id.saveBtn);
     }
 }

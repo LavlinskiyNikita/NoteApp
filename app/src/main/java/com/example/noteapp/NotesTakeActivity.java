@@ -40,7 +40,7 @@ public class NotesTakeActivity extends AppCompatActivity {
 
 
 
-                if (description.isEmpty() && title.isEmpty()) {
+                if (description.isEmpty()) {
                     Toast.makeText(NotesTakeActivity.this, "пожалуйста, ввидите текст", Toast.LENGTH_SHORT).show();
                     return;
                 }
