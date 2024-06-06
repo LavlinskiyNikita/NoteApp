@@ -24,6 +24,25 @@
             android:layout_marginTop="12dp"/>
     </LinearLayout>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchViewCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_below="@id/navLL"
+        android:layout_margin="10dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:queryHint="Search"
+            app:iconifiedByDefault="false"
+            android:background="@color/green" />
+    </androidx.cardview.widget.CardView>
+
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNote"
         android:layout_width="match_parent"

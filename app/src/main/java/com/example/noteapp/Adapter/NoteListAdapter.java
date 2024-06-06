@@ -1,4 +1,4 @@
-package com.example.noteapp;
+package com.example.noteapp.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.noteapp.Interface.NotesClickListener;
 import com.example.noteapp.Model.Notes;
+import com.example.noteapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +44,7 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
         holder.dateTxt.setText(notesList.get(position).getDate());
         holder.dateTxt.setSelected(true);
 
-        if (notesList.get(position).isPinned()) {
+        if (notesList.get(position).getPinned()) {
             holder.imageView.setImageResource(R.drawable.map_pin_9239326);
         } else {
             holder.imageView.setImageResource(0);
@@ -110,6 +111,12 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
     @Override
     public int getItemCount() {
         return notesList.size();
+    }
+
+    public void filterList(List<Notes> filterList) {
+        notesList = filterList;
+        notifyDataSetChanged();
+
     }
 }
 

@@ -21,6 +21,9 @@ public class NotesTakeActivity extends AppCompatActivity {
     ImageView saveBtn;
     Notes notes;
 
+
+    boolean isOldNotes = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,15 +33,29 @@ public class NotesTakeActivity extends AppCompatActivity {
         titleEdt = findViewById(R.id.titleEdt);
         noteEdt = findViewById(R.id.noteEdt);
 
+        notes = new Notes();
+        try {
+           notes = (Notes) getIntent().getSerializableExtra("old_notes");
+           titleEdt.setText(notes.getTitle());
+           noteEdt.setText(notes.getNotes());
+           isOldNotes = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                notes = new Notes();
+
+                if (!isOldNotes) {
+                    notes = new Notes();
+                }
+
+
                 String title = titleEdt.getText().toString();
                 String description = noteEdt.getText().toString();
-
-
 
                 if (description.isEmpty()) {
                     Toast.makeText(NotesTakeActivity.this, "пожалуйста, ввидите текст", Toast.LENGTH_SHORT).show();
