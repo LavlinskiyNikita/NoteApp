@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="whote_gray">#E4E8E9</color>
+    <color name="green">#3E835D</color>
+
+    ///random
+    <color name="Soft_peach">#FED6BC</color>
+    <color name="Light_yellow">#FFFADD</color>
+    <color name="Pastel_heavenly">#DEF7FE</color>
+    <color name="Light_purple">#E7ECFF</color>
+    <color name="Light_green">#C3FBD8</color>
+    <color name="Light_pink">#FDEED9</color>
+    <color name="Lime">#F6FFF8</color>
+    <color name="Aquamarine">#B5F2EA</color>
+    <color name="Lilac">#C6D8FF</color>
+    <color name="dark_blue">#3E5C67</color>
+    <color name="ujujujy">#66739D</color>
+    <color name="grayish_blue">#376B75</color>
+    <color name="yellow_mallow">#5990AF</color>
+    <color name="amethyst">#DCCAFF</color>
+    <color name="rich_purple_blue">#4A4FA7</color>
+    <color name="grayish_purple_pink">#C7958B</color>
+    <color name="almond">#F0D5CF</color>
+    <color name="desert_sand">#F1D3B9</color>
+    <color name="pastel_greenish_blue">#739EA7</color>
+    <color name="dark_green_tea">#B1D4A9</color>
+    <color name="gray_lavender">#D2BFD2</color>
+    <color name="color_gray_aquamarine">#A9BCBF</color>
+    <color name="light_yellow">#F2D1BB</color>
+    <color name="dark_gray">#75838D</color>
+    <color name="dusty_blue">#CAEBF0</color>
+    <color name="pink_brown">#BC8B8F</color>
+    <color name="light_golden">#FFEE84</color>
+    <color name="platinum_gray">#C1BDD8</color>
+    <color name="apricot">#FDDCBB</color>
+    <color name="Niagara_color">#7C97B2</color>
+    <color name="pale_green_gray">#8A8F71</color>
+</resources>

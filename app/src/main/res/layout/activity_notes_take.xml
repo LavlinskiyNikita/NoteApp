@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whote_gray"
+    tools:context=".NotesTakeActivity">
+
+    <RelativeLayout
+        android:id="@+id/navLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note"
+            android:textColor="@color/green"
+            android:textSize="24dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="12dp"/>
+
+        <ImageView
+            android:id="@+id/saveBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/tick_circle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="20dp"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/titleEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="Title"
+        android:textSize="30dp"
+        android:background="@android:color/transparent"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/noteEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="Title"
+        android:background="@android:color/transparent"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:textColorHint="@color/black"/>
+
+
+
+</LinearLayout>
