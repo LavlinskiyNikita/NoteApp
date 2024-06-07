@@ -66,7 +66,7 @@ public class NotesTakeActivity extends AppCompatActivity {
                 String title = titleEdt.getText().toString();
                 String description = noteEdt.getText().toString();
 
-                if (description.isEmpty()) {
+                if (description.isEmpty() && title.isEmpty()) {
                     Toast.makeText(NotesTakeActivity.this, "пожалуйста, ввидите текст", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -74,7 +74,13 @@ public class NotesTakeActivity extends AppCompatActivity {
                 SimpleDateFormat format = new SimpleDateFormat("EEE, d MMM yyyy HH:mm a");
                 Date date = new Date();
 
-                notes.setTitle(title);
+
+                if (title.isEmpty()) {
+                    notes.setTitle(description);
+                } else {
+                    notes.setTitle(title);
+                }
+
                 notes.setNotes(description);
                 notes.setDate(format.format(date));
 
