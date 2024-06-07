@@ -10,16 +10,24 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.noteapp.Adapter.NoteListAdapter;
+import com.example.noteapp.Database.RoomBD;
 import com.example.noteapp.Model.Notes;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class NotesTakeActivity extends AppCompatActivity {
 
     EditText titleEdt, noteEdt;
-    ImageView saveBtn;
+    ImageView saveBtn, delBtn;
     Notes notes;
+//    Notes selectedNotes;
+    RoomBD database;
+//    List<Notes> notess = new ArrayList<>();
+//    NoteListAdapter noteListAdapter;
 
 
     boolean isOldNotes = false;
@@ -30,6 +38,7 @@ public class NotesTakeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notes_take);
 
         saveBtn = findViewById(R.id.saveBtn);
+        delBtn = findViewById(R.id.delBtn);
         titleEdt = findViewById(R.id.titleEdt);
         noteEdt = findViewById(R.id.noteEdt);
 
@@ -72,6 +81,15 @@ public class NotesTakeActivity extends AppCompatActivity {
                 Intent i = new Intent();
                 i.putExtra("note", notes);
                 setResult(Activity.RESULT_OK, i);
+                finish();
+            }
+        });
+
+        delBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(NotesTakeActivity.this, MainActivity.class);
+                startActivity(i);
                 finish();
             }
         });

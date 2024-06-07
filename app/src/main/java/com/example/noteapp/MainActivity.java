@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements  PopupMenu.OnMenu
         searchView = findViewById(R.id.searchView);
 
         database = RoomBD.getInstance(this);
-//        notes = database.MainDAO().getAll();
+        notes = database.MainDAO().getAll();
 
         updateRecycle(notes);
 
@@ -136,6 +136,8 @@ public class MainActivity extends AppCompatActivity implements  PopupMenu.OnMenu
 
         PopupMenu popupMenu = new PopupMenu(this, cardView);
         popupMenu.setOnMenuItemClickListener(this);
+        popupMenu.inflate(R.menu.popup_menu);
+        popupMenu.show();
 
     }
 

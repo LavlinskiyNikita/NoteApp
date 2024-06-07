@@ -2,8 +2,19 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Noteapp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimaryDark">@color/whote_gray</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="Theme.Noteapp" parent="Base.Theme.Noteapp" />
+
+    <style name="Theme.Noteapp" parent="Base.Theme.Noteapp"/>
+
+    <style name="ThemeOverlay.SearchView" parent="">
+        <!-- Text color -->
+        <item name="android:editTextColor">@color/whote_gray</item>
+        <!-- Hint text color -->
+        <item name="android:textColorHint">@color/whote_gray</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+    </style>
 </resources>

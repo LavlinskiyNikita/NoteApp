@@ -47,11 +47,11 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
         if (notesList.get(position).getPinned()) {
             holder.imageView.setImageResource(R.drawable.map_pin_9239326);
         } else {
-            holder.imageView.setImageResource(0);
+//            holder.imageView.setImageResource(0);
         }
 
         int color_code = getRandomColor();
-        holder.cardView.setCardBackgroundColor(holder.imageView.getResources().getColor(color_code));
+        holder.cardView.setCardBackgroundColor(context.getResources().getColor(color_code));
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override

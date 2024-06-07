@@ -2,20 +2,23 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="NotesTakeActivity">
+        <State />
+      </entry>
       <entry key="app">
         <State>
-          <targetSelectedWithDropDown>
+          <runningDeviceTargetSelectedWithDropDown>
             <Target>
-              <type value="QUICK_BOOT_TARGET" />
+              <type value="RUNNING_DEVICE_TARGET" />
               <deviceKey>
                 <Key>
-                  <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\nikit\.android\avd\Pixel_7_Pro_API_26.avd" />
+                  <type value="SERIAL_NUMBER" />
+                  <value value="6504544c" />
                 </Key>
               </deviceKey>
             </Target>
-          </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-06-06T22:12:47.999676800Z" />
+          </runningDeviceTargetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-06-07T18:18:43.262797200Z" />
         </State>
       </entry>
     </value>
