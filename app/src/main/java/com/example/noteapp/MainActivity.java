@@ -143,20 +143,7 @@ public class MainActivity extends AppCompatActivity implements  PopupMenu.OnMenu
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
-        if (item.getItemId() == R.id.pin) {
-            if (selectedNotes.getPinned()) {
-                database.MainDAO().Pin(selectedNotes.getID(), false);
-                Toast.makeText(this, "UnPinned", Toast.LENGTH_SHORT).show();
-            } else {
-                database.MainDAO().Pin(selectedNotes.getID(), true);
-                Toast.makeText(this, "Pinned", Toast.LENGTH_SHORT).show();
-            }
-
-            notes.clear();
-            notes.addAll(database.MainDAO().getAll());
-            noteListAdapter.notifyDataSetChanged();
-            return true;
-        } else if (item.getItemId() == R.id.delete) {
+       if (item.getItemId() == R.id.delete) {
             database.MainDAO().delete(selectedNotes);
             notes.remove(selectedNotes);
             noteListAdapter.notifyDataSetChanged();
